@@ -1,0 +1,11 @@
+.ThemeButton {
+    width: 3.6rem;
+    height: 3.6rem;
+    border-radius: 2px;
+    background-color: var(--color-purple);
+}
+
+.ThemeButton svg {
+    width: 1.4rem;
+    height: auto;
+}

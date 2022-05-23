@@ -1,13 +1,108 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --color-bg-white: #F5F5F5;
+  --color-bg-black: #121212;
+  --color-secondary: #034063;
+
+  --color-purple: #746791;
+
+  /* Font family */
+  --fm-open-sans: 'Open Sans', sans-serif;
+  --fm-playfair: 'Playfair Display', serif;
+
+  /* Font color */
+  --fc-white: #f5f5f5;
+  --fc-black: #121212;
+  --fc-blud: #034063;
+
+  --fs-heading-primary: 3.6rem;
+  --fs-heading-secondary: 2rem;
+
+  --fs-text: 1.6rem;
+
+  --line-height-heading: 1.2;
+  --line-height-text: 1.5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* Utilities */
+.u-margin-bottom--small {margin-bottom: 1rem;}
+.u-margin-bottom--medium {margin-bottom: 2rem;}
+.u-margin-bottom--large {margin-bottom: 3.6rem;}
+
+.flex { display: flex; }
+.direction-column { flex-direction: column; }
+.justify-between { justify-content: space-between; } 
+.justify-center { justify-content: center; }
+.items-center { align-items: center; }
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: var(--fm-open-sans);
+  background-color: var(--color-bg-black);
+}
+
+#App {
+  height: 100%;
+}
+
+.spacing {
+  margin: auto 15vw;
+}
+
+.container {
+  height: 100%;
+}
+
+.heading-primary,
+.heading-secondary,
+h1,
+h2 {
+  font-family: var(--fm-playfair);
+  line-height: var(--line-height-heading);
+  font-weight: 300;
+  color: var(--fc-white);
+}
+
+.heading-primary { font-size: var(--fs-heading-primary); }
+.heading-secondary{ font-size: var(--fs-heading-secondary); }
+
+.paragraph,
+p,
+ul {
+  font-family: var(--fm-open-sans);
+  line-height: var(--line-height-text);
+  font-size: var(--fs-text);
+  font-weight: 300;
+
+  color: #B3B3B3;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  color: var(--fc-white);
+}
+
+ul {
+  list-style: none;
+}
+
+svg {
+  fill: var(--fc-white);
+  width: 2rem;
+  height: 2rem;
 }
