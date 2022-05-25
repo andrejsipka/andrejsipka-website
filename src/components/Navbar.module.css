@@ -1,8 +1,11 @@
 .Navbar {
-    padding: 2rem;
+    background-color: #16161a;
+    position: sticky;
+    top: 0;
 }
 
-.links {
+.Navbar__wrapper {
+    padding: 1.6rem 0;
 }
 
 .links__list {

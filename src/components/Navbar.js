@@ -4,24 +4,25 @@ import { Link } from "react-router-dom";
 import styles from './Navbar.module.css';
 
 // Components
-import ThemeButton from "./ThemeButton";
+
 
 const Navbar = () => {
   return (
-      <nav className={`${styles.Navbar} spacing flex justify-between items-center`}>
-        <h2 className="heading-secondary">
-          <Link to="/">
-            <span className="paragraph">\m/ </span>
-            Andrej Sipka
-          </Link>
-        </h2>
+      <nav className={styles.Navbar}>
+        <div className={`${styles.Navbar__wrapper} spacing flex justify-between items-center`}>
+          <h2 className="heading-secondary">
+            <Link to="/">
+              Andrej Sipka
+            </Link>
+          </h2>
 
-        <div className="flex items-center">
-          <ul className={styles.links__list}>
-            <li className="paragraph"><Link to="/">Work</Link></li>
-          </ul>
+          <div className="flex items-center">
+            <ul className={styles.links__list}>
+              <li className="paragraph"><Link to="/">Work</Link></li>
+            </ul>
         
-          <ThemeButton />
+            <button className="button--outlined">Say Hello!</button>
+          </div>
         </div>
       </nav>
   );

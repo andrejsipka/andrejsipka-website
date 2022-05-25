@@ -1,62 +1,81 @@
 .Home {
-    height: 168rem;
 }
 
-.header,
-.headerMobile {
+.Home__wrapper {
+    margin-top: 6.4rem;
+}
+
+.header {
     width: 100%;
+    max-width: 70rem;
+    margin-bottom: 3.2rem;
 }
 
-.header { display: none; }
-.headerMobile { 
-    display: block;
+.header__name-last {
+    margin: 0;
+    margin-left: 5rem;
 }
 
-@media only screen and (min-width: 640px) {
-    .header{ display: block; }
-    .headerMobile { display: none; }
-}
-
-.nameMobile > span {
-    display: block;
-}
-
-.name__first,
-.nameMobile__first { margin-right: 1rem; }
-
-.name__last,
-.nameMobile__last { margin-left: 4rem; }
-
-.name__who {
-    display: inline-block;
+.header__name-last span { display: block; }
+.header__name-last span:last-child { 
+    margin-top: 1rem;
 }
 
 /* Content */
 .content {
     width: 100%;
-    max-width: 50rem;
+    max-width: 48rem;
 }
 
-.content > *:not(:last-child) {
-    margin-bottom: 3.6rem;
+.about,
+.present {
+    margin-bottom: 6.4rem;
 }
 
-.portrait {
-    height: 80vw;
-    min-height: 60rem;
-    max-height: 70rem;
+/* About section */
+.about__portrait {
     width: 100%;
-    background-position: center;
-    background-size: cover;
-    background-image: url("/src/assets/img/me.png");
 }
 
-.about p {
-    text-indent: 3rem;
+.about__toolbox {
+    padding: 2rem;
+    border-radius: 2px;
+    background-color: #242629;
 }
+
+/* Present */
+.present__list li {
+    position: relative;
+    margin-left: 1.6rem;
+}
+
+.present__list li:before {
+    content: "";
+    height: 1.6rem;
+    width: 3px;
+    position: absolute;
+    left: -1.6rem;
+    top: 50%;
+    transform: translateY(-40%);
+    background-color: #94a1b2;
+}
+
+/* Work */
+.work {
+    margin-bottom: 12.8rem;
+}
+
+/* Footer */
 
 .footer {
+    background-color: #242629;
+    text-align: center;
+    height: 24rem;
+}
+
+.footer__wrapper {
     width: 100%;
+    max-width: 48rem;
 }
 
 .footer__list li {
@@ -64,10 +83,6 @@
     align-items: center;
 }
 
-.footer__list li:not(:last-child) {
-    margin-bottom: 1rem;
-}
-
 .footer__list li svg {
-    margin-right: 2rem;
+    margin-right: 1rem;
 }
